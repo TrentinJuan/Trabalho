@@ -1,0 +1,225 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Temporizador</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="salvar()">
+        <ion-icon name="checkmark" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="slide-inner">
+
+  <div class="img" style="opacity: 0.1">
+    <img src="assets/tj.png">
+  </div>
+
+  <div class="filho">
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="12" size-sm>
+          <ion-item>
+            <ion-label>Saída</ion-label>
+            <ion-select value="saida" okText="Salvar" cancelText="Cancelar">
+              <ion-select-option value="0">Portão Rua</ion-select-option>
+              <ion-select-option value="1">Portão da Garagem</ion-select-option>
+              <ion-select-option value="2">Porta Social</ion-select-option>
+              <ion-select-option value="3">Alarme</ion-select-option>
+              <ion-select-option value="4">Luz LEDs Garagem</ion-select-option>
+              <ion-select-option value="5">S6</ion-select-option>
+              <ion-select-option value="6">S7</ion-select-option>
+              <ion-select-option value="7">S8</ion-select-option>
+              <ion-select-option value="8">S9</ion-select-option>
+              <ion-select-option value="9">S10</ion-select-option>
+              <ion-select-option value="10">S11</ion-select-option>
+              <ion-select-option value="11">S12</ion-select-option>
+              <ion-select-option value="12">S13</ion-select-option>
+              <ion-select-option value="13">S14</ion-select-option>
+              <ion-select-option value="14">Desligar</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-sm>
+          <ion-item>
+            <ion-label>Ação</ion-label>
+            <ion-select value="acao" okText="Salvar" cancelText="Cancelar">
+              <ion-select-option value="0">Desligar</ion-select-option>
+              <ion-select-option value="1">Ligar</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-sm>
+          <ion-item>
+            <ion-label>Dia</ion-label>
+            <ion-select value="dia" okText="Salvar" cancelText="Cancelar">
+              <ion-select-option value="0">Todos</ion-select-option>
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="1">2</ion-select-option>
+              <ion-select-option value="1">3</ion-select-option>
+              <ion-select-option value="1">4</ion-select-option>
+              <ion-select-option value="1">5</ion-select-option>
+              <ion-select-option value="1">6</ion-select-option>
+              <ion-select-option value="1">7</ion-select-option>
+              <ion-select-option value="1">8</ion-select-option>
+              <ion-select-option value="1">9</ion-select-option>
+              <ion-select-option value="1">10</ion-select-option>
+              <ion-select-option value="1">11</ion-select-option>
+              <ion-select-option value="1">12</ion-select-option>
+              <ion-select-option value="1">13</ion-select-option>
+              <ion-select-option value="1">14</ion-select-option>
+              <ion-select-option value="1">15</ion-select-option>
+              <ion-select-option value="1">16</ion-select-option>
+              <ion-select-option value="1">17</ion-select-option>
+              <ion-select-option value="1">18</ion-select-option>
+              <ion-select-option value="1">19</ion-select-option>
+              <ion-select-option value="1">20</ion-select-option>
+              <ion-select-option value="1">21</ion-select-option>
+              <ion-select-option value="1">22</ion-select-option>
+              <ion-select-option value="1">23</ion-select-option>
+              <ion-select-option value="1">24</ion-select-option>
+              <ion-select-option value="1">25</ion-select-option>
+              <ion-select-option value="1">26</ion-select-option>
+              <ion-select-option value="1">27</ion-select-option>
+              <ion-select-option value="1">28</ion-select-option>
+              <ion-select-option value="1">29</ion-select-option>
+              <ion-select-option value="1">30</ion-select-option>
+              <ion-select-option value="1">31</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-sm>
+          <ion-item>
+            <ion-label>Mês</ion-label>
+            <ion-select value="mes" okText="Salvar" cancelText="Cancelar">
+              <ion-select-option value="0">Todos</ion-select-option>
+              <ion-select-option value="1">1/Janeiro</ion-select-option>
+              <ion-select-option value="2">2/Fevereiro</ion-select-option>
+              <ion-select-option value="3">3/Março</ion-select-option>
+              <ion-select-option value="4">4/Abril</ion-select-option>
+              <ion-select-option value="5">5/Maio</ion-select-option>
+              <ion-select-option value="6">6/Junho</ion-select-option>
+              <ion-select-option value="7">7/Julho</ion-select-option>
+              <ion-select-option value="8">8/Agosto</ion-select-option>
+              <ion-select-option value="9">9/Setembro</ion-select-option>
+              <ion-select-option value="10">10/Outubro</ion-select-option>
+              <ion-select-option value="11">11/Novembro</ion-select-option>
+              <ion-select-option value="12">12/Dezembro</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+
+      </ion-row>
+
+      <ion-col size="12" size-sm>
+        <ion-item>
+          <ion-label>Hora</ion-label>
+          <ion-select value="hora" okText="Salvar" cancelText="Cancelar">
+            <ion-select-option value="0">0</ion-select-option>
+            <ion-select-option value="1">1</ion-select-option>
+            <ion-select-option value="2">2</ion-select-option>
+            <ion-select-option value="3">3</ion-select-option>
+            <ion-select-option value="4">4</ion-select-option>
+            <ion-select-option value="5">5</ion-select-option>
+            <ion-select-option value="6">6</ion-select-option>
+            <ion-select-option value="7">7</ion-select-option>
+            <ion-select-option value="8">8</ion-select-option>
+            <ion-select-option value="9">9</ion-select-option>
+            <ion-select-option value="10">10</ion-select-option>
+            <ion-select-option value="11">11</ion-select-option>
+            <ion-select-option value="12">12</ion-select-option>
+            <ion-select-option value="13">13</ion-select-option>
+            <ion-select-option value="14">14</ion-select-option>
+            <ion-select-option value="15">15</ion-select-option>
+            <ion-select-option value="16">16</ion-select-option>
+            <ion-select-option value="17">17</ion-select-option>
+            <ion-select-option value="18">18</ion-select-option>
+            <ion-select-option value="19">19</ion-select-option>
+            <ion-select-option value="20">20</ion-select-option>
+            <ion-select-option value="21">21</ion-select-option>
+            <ion-select-option value="22">22</ion-select-option>
+            <ion-select-option value="23">23</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="12" size-sm>
+        <ion-item>
+          <ion-label>Minuto</ion-label>
+          <ion-select value="minuto" okText="Salvar" cancelText="Cancelar">
+            <ion-select-option value="0">00</ion-select-option>
+            <ion-select-option value="1">01</ion-select-option>
+            <ion-select-option value="2">02</ion-select-option>
+            <ion-select-option value="3">03</ion-select-option>
+            <ion-select-option value="4">04</ion-select-option>
+            <ion-select-option value="5">05</ion-select-option>
+            <ion-select-option value="6">06</ion-select-option>
+            <ion-select-option value="7">07</ion-select-option>
+            <ion-select-option value="8">08</ion-select-option>
+            <ion-select-option value="9">09</ion-select-option>
+            <ion-select-option value="10">10</ion-select-option>
+            <ion-select-option value="11">11</ion-select-option>
+            <ion-select-option value="12">12</ion-select-option>
+            <ion-select-option value="13">13</ion-select-option>
+            <ion-select-option value="14">14</ion-select-option>
+            <ion-select-option value="15">15</ion-select-option>
+            <ion-select-option value="16">16</ion-select-option>
+            <ion-select-option value="17">17</ion-select-option>
+            <ion-select-option value="18">18</ion-select-option>
+            <ion-select-option value="19">19</ion-select-option>
+            <ion-select-option value="20">20</ion-select-option>
+            <ion-select-option value="21">21</ion-select-option>
+            <ion-select-option value="22">22</ion-select-option>
+            <ion-select-option value="23">23</ion-select-option>
+            <ion-select-option value="24">24</ion-select-option>
+            <ion-select-option value="25">25</ion-select-option>
+            <ion-select-option value="26">26</ion-select-option>
+            <ion-select-option value="27">27</ion-select-option>
+            <ion-select-option value="28">28</ion-select-option>
+            <ion-select-option value="29">29</ion-select-option>
+            <ion-select-option value="30">30</ion-select-option>
+            <ion-select-option value="31">31</ion-select-option>
+            <ion-select-option value="32">32</ion-select-option>
+            <ion-select-option value="33">33</ion-select-option>
+            <ion-select-option value="33">33</ion-select-option>
+            <ion-select-option value="34">34</ion-select-option>
+            <ion-select-option value="35">35</ion-select-option>
+            <ion-select-option value="36">36</ion-select-option>
+            <ion-select-option value="37">37</ion-select-option>
+            <ion-select-option value="38">38</ion-select-option>
+            <ion-select-option value="39">39</ion-select-option>
+            <ion-select-option value="40">40</ion-select-option>
+            <ion-select-option value="41">41</ion-select-option>
+            <ion-select-option value="42">42</ion-select-option>
+            <ion-select-option value="43">43</ion-select-option>
+            <ion-select-option value="44">44</ion-select-option>
+            <ion-select-option value="45">45</ion-select-option>
+            <ion-select-option value="46">46</ion-select-option>
+            <ion-select-option value="47">47</ion-select-option>
+            <ion-select-option value="48">48</ion-select-option>
+            <ion-select-option value="49">49</ion-select-option>
+            <ion-select-option value="50">50</ion-select-option>
+            <ion-select-option value="51">51</ion-select-option>
+            <ion-select-option value="52">52</ion-select-option>
+            <ion-select-option value="53">53</ion-select-option>
+            <ion-select-option value="54">54</ion-select-option>
+            <ion-select-option value="55">55</ion-select-option>
+            <ion-select-option value="56">56</ion-select-option>
+            <ion-select-option value="57">57</ion-select-option>
+            <ion-select-option value="58">58</ion-select-option>
+            <ion-select-option value="59">59</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-grid>
+  </div>
+
+</ion-content>

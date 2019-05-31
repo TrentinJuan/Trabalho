@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Configurações</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="salvar()">
+        <ion-icon name="checkmark" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="configurar">
+
+  <div class="img">
+    <img src="assets/tj.png">
+  </div>
+
+  <div class="filho">
+
+    <form [formGroup]="formRename">
+      <div>
+        <span style="padding-left: 25%; font-weight: bold">Renomear Botões</span>
+      </div>  
+      <div class="filhodofilho">
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Portão Rua</ion-label>
+          <ion-input type="text" formControName="portao1"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Portão Garagem</ion-label>
+          <ion-input type="text" formControName="portao2"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Porta Social</ion-label>
+          <ion-input type="text" formControName="portao3"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Alarme </ion-label>
+          <ion-input type="text" formControName="portao4"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Luz LEDs Garagem</ion-label>
+          <ion-input type="text" formControName="portao5"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Botao 6 </ion-label>
+          <ion-input type="text" formControName="portao6"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Botao 7 </ion-label>
+          <ion-input type="text" formControName="portao7"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Botao 8 </ion-label>
+          <ion-input type="text" formControName="portao8"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Botao 9 </ion-label>
+          <ion-input type="text" formControName="portao9"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Botao 10 </ion-label>
+          <ion-input type="text" formControName="portao10"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Botao 11 </ion-label>
+          <ion-input type="text" formControName="portao11"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Botao 12 </ion-label>
+          <ion-input type="text" formControName="portao12"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Botao 13 </ion-label>
+          <ion-input type="text" formControName="portao13"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Botao 14 </ion-label>
+          <ion-input type="text" formControName="portao14"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Botao 15 </ion-label>
+          <ion-input type="text" formControName="portao15"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <div>
+          <span style="padding-left: 25%; font-weight: bold; width: 10px">Sensores</span>
+        </div>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Portão Rua</ion-label>
+          <ion-input type="text" formControName="sensor1"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Portão Garagem</ion-label>
+          <ion-input type="text" formControName="sensor2"></ion-input>
+          <ion-icon name="button" slot="start"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" style="opacity: 0.7">Portão Social </ion-label>
+          <ion-input type="text" formControName="sensor3"></ion-input>
+          <ion-icon name=" button" slot="start">
+          </ion-icon>
+        </ion-item>
+      </div>
+    </form>
+  </div>
+
+
+</ion-content>

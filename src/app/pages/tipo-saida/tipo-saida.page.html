@@ -1,0 +1,145 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tipo de Saída</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="salvar()">
+        <ion-icon name="checkmark" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="pai">
+  <div class="tipo-saida">
+
+    <div class="img" style="opacity: 0.4">
+      <img src="assets/tj.png">
+    </div>
+
+
+    <div class="tipofilho">
+      <form [formGroup]="formtipoSaida">
+        <h5>Configure o tipo de saída(Pulso/Retenção)</h5>
+        <h5>0 para retenção e 1 para pulso</h5>
+
+        <ion-list>
+          <ion-item>
+            <ion-label>Botão 1</ion-label>
+            <ion-select value="selBtn1" okText="Salvar" cancelText="Cancelar" formControlName="selBtn1">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Botão 2</ion-label>
+            <ion-select value="selBtn2" okText="Salvar" cancelText="Cancelar" formControlName="selBtn2">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Botão 3</ion-label>
+            <ion-select value="selBtn3" okText="Salvar" cancelText="Cancelar" formControlName="selBtn3">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Botão 4</ion-label>
+            <ion-select value="selBtn4" okText="Salvar" cancelText="Cancelar" formControlName="selBtn4">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Botão 5</ion-label>
+            <ion-select value="selBtn5" okText="Salvar" cancelText="Cancelar" formControlName="selBtn5">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Botão 6</ion-label>
+            <ion-select value="selBtn6" okText="Salvar" cancelText="Cancelar" formControlName="selBtn6">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Botão 7</ion-label>
+            <ion-select value="selBtn7" okText="Salvar" cancelText="Cancelar" formControlName="selBtn7">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Botão 8</ion-label>
+            <ion-select value="selBtn8" okText="Salvar" cancelText="Cancelar" formControlName="selBtn8">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Botão 9</ion-label>
+            <ion-select value="selBtn9" okText="Salvar" cancelText="Cancelar" formControlName="selBtn9">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Botão 10</ion-label>
+            <ion-select value="selBtn10" okText="Salvar" cancelText="Cancelar" formControlName="selBtn10">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Botão 11</ion-label>
+            <ion-select value="selBtn11" okText="Salvar" cancelText="Cancelar" formControlName="selBtn11">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Botão 12</ion-label>
+            <ion-select value="selBtn12" okText="Salvar" cancelText="Cancelar" formControlName="selBtn12">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Botão 13</ion-label>
+            <ion-select value="selBtn13" okText="Salvar" cancelText="Cancelar" formControlName="selBtn13">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Botão 14</ion-label>
+            <ion-select value="selBtn14" okText="Salvar" cancelText="Cancelar" formControlName="selBtn14">
+              <ion-select-option value="0">0 - Retenção</ion-select-option>
+              <ion-select-option value="1">1 - Pulso</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </form>
+    </div>
+  </div>
+
+</ion-content>

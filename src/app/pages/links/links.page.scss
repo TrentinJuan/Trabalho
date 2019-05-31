@@ -1,0 +1,23 @@
+.links{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+
+    .img{
+        height: 50%;
+        width: 100%;
+        position: fixed;
+        top: 35%;
+        left: 15%;
+    }
+
+    .linksfilho{
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 100;
+        padding: 5%;
+    }
+}

@@ -1,0 +1,23 @@
+.configuracao{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+
+    .cgfIP{
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 100;
+        padding: 5%;
+    }
+    .img{
+        height: 50%;
+        width: 80%;
+        position: fixed;
+        top: 25%;
+        left: 20%;
+    }
+
+}

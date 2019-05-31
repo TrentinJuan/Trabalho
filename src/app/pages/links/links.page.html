@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Links</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="salvar()">
+        <ion-icon name="checkmark" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="links">
+
+  <div class="img" style="opacity: 0.1">
+    <img src="assets/tj.png">
+  </div>
+
+
+
+  <div class="linksfilho">
+    <form [formGroup]="formUser">
+      <ion-item>
+        <ion-label position="stacked">Nome</ion-label>
+        <ion-input type="nome" formControlName="nome"></ion-input>
+        <ion-icon name="person" slot="start"></ion-icon>
+      </ion-item>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Estado</ion-label>
+          <ion-icon name="create" slot="start"></ion-icon>
+          <ion-select value="estado" okText="Salvar" cancelText="Cancelar" formControlName="estado">
+            <ion-select-option value="1">Ativo</ion-select-option>
+            <ion-select-option value="0">Inativo</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <ion-item class="endereco">
+        <ion-label position="stacked">Endereço</ion-label>
+        <ion-input formControlName="endereco" type="endereco"></ion-input>
+        <ion-icon name="home" slot="start"></ion-icon>
+      </ion-item>
+    </form>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,82 @@
+<ion-content class="swiper-no-swiping">
+  <!--Imagem-->
+  <div class="imagem">
+    <img src="assets/LogoTJ.png">
+  </div>
+
+
+  <!--Inico dos "Slides"-->
+  <ion-slides>
+    <!--Inicio do Slide primario-->
+    <ion-slide>
+
+      <div class="slide-inner">
+        <ion-item>
+          <ion-label position="stacked">Usuario</ion-label>
+          <ion-input [(ngModel)]="login" type="login"></ion-input>
+          <ion-icon name="person" slot="start"></ion-icon>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Senha</ion-label>
+          <ion-input [(ngModel)]="senha" type="password"></ion-input>
+          <ion-icon name="key" slot="start"></ion-icon>
+        </ion-item>
+
+
+        <div class="buttons">
+          <ion-button fill="outline" (click)="logar()" expand="block">
+            <ion-icon name="log-in" slot="start"></ion-icon>
+            Login
+          </ion-button>
+
+          <ion-button fill="outline" expand="block">
+            <ion-icon name="exit" slot="start"></ion-icon>
+            Sair
+          </ion-button>
+
+          <ion-button fill="outline" expand="block" (click)="registrar()">
+            <ion-icon name="exit" slot="start">
+            </ion-icon>
+            Registrar
+          </ion-button>
+        </div>
+
+      </div>
+
+    </ion-slide>
+    <!--Fim do Slide primario-->
+
+    <!--INICIO DO SEGUNDO SLIDE -->
+    <ion-slide>
+
+      <div class="slide-inner">
+        <form [formGroup]="formLogin" (ngSubmit)="salvar()">
+          <div class="registrar1">
+            <span>Registrar</span>
+          </div>
+
+          <ion-item>
+            <ion-label position="stacked">Usuario</ion-label>
+            <ion-input type="text" formControlName="login"></ion-input>
+            <ion-icon name="person" slot="start"></ion-icon>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Senha</ion-label>
+            <ion-input type="password" formControlName="senha"></ion-input>
+            <ion-icon name="key" slot="start"></ion-icon>
+          </ion-item>
+
+          <div class="buttons">
+            <ion-button expand="block" type="submit()" [disabled]="!formLogin.valid">Registrar</ion-button>
+            <ion-button fill="outline" expand="block" (click)="cancelar()">Cancelar</ion-button>
+          </div>
+        </form>
+      </div>
+
+    </ion-slide>
+
+  </ion-slides>
+  <!--Fim dos "Slides"-->
+</ion-content>

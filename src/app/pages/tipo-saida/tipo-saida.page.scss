@@ -1,0 +1,28 @@
+
+.tipo-saida{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+
+    .img{
+        height: 50%;
+        width: 80%;
+        position: fixed;
+        top: 25%;
+        left: 15%;
+        overflow: hidden;
+    }
+
+    .tipofilho{
+        top: -3%;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        position: absolute;
+        z-index: 100;
+        opacity: 0.8;
+        padding: 5%;
+    }
+}
+
