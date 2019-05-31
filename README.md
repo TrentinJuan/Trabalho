@@ -1,1 +1,1 @@
-Trabalho Realizado para automacao de casas
+Trabalho em andamento para automacao de residencia/empresas.
