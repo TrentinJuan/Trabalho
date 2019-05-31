@@ -9,6 +9,4 @@ export const formatResponse = _prResponse => {
     return inicioData === -1
         ? _prResponse.substring(inicioData, finalData)
         : eval(_prResponse.substring(inicioData, finalData));
-
 }
-

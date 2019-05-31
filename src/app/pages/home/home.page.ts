@@ -52,7 +52,7 @@ export class HomePage implements OnInit {
   public request() {
     this.api.request()
       .then(response => {
-        console.log('caiu no api request');
+        console.log('caiu no api request', this.request);
       })
       .catch(err => console.log('Error: ', err))
   }
