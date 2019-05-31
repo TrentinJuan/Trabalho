@@ -46,7 +46,7 @@ export class HomePage implements OnInit {
     this.menuCtrl.enable(true);
   }
 
-  //criar um response com eval
+  // Criar um response com eval
   //jogar em um array
   // // e jogar no lstBotao
   public request() {
