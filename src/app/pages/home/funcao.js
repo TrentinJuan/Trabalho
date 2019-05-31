@@ -12,4 +12,3 @@ export const formatResponse = _prResponse => {
 
 }
 
-import { formatResponse } from './funcao.ts';

@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MenuController, NavController } from '@ionic/angular';
 import { api } from 'src/app/services/api';
 
-import { formatResponse } from './funcao.js';
+//import { formatResponse } from './funcao.js';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class HomePage implements OnInit {
   public formBotoes: FormGroup;
 
   // Jogar a requisicao dento do Array
-  public response: formatResponse[] = [];
+  //public response: formatResponse[] = [];
 
 
   public sensor1: string;// Portao Rua
@@ -27,7 +27,7 @@ export class HomePage implements OnInit {
     public menuCtrl: MenuController,
     public navCtrl: NavController,
     public api: api,
-    public funcao: formatResponse) {
+    /*public funcao: formatResponse*/) {
     this.request();
   }
 
@@ -52,7 +52,7 @@ export class HomePage implements OnInit {
   public request() {
     this.api.request()
       .then(response => {
-        console.log('caiu no api request', this.funcao);
+        console.log('caiu no api request');
       })
       .catch(err => console.log('Error: ', err))
   }
