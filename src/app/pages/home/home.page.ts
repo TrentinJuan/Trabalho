@@ -15,7 +15,7 @@ export class HomePage implements OnInit {
 
   public formBotoes: FormGroup;
 
-  //jogar a requisicao dento do Array
+  // Jogar a requisicao dento do Array
   public response: formatResponse[] = [];
 
 
