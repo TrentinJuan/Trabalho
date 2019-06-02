@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MenuController, NavController } from '@ionic/angular';
 import { api } from 'src/app/services/api';
 
-//import { formatResponse } from './funcao.js';
+import { formatResponse } from './funcao';
 
 
 @Component({
@@ -52,7 +52,9 @@ export class HomePage implements OnInit {
   public request() {
     this.api.request()
       .then(response => {
+        let lst = formatResponse(response)
         console.log('caiu no api request', this.request);
+        console.log('retorno ' + lst)
       })
       .catch(err => console.log('Error: ', err))
   }

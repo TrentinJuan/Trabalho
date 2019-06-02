@@ -15,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { api } from './services/api';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http' 
+//import { formatResponse } from './pages/home/funcao';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ providers: [
     api,
     ReactiveFormsModule,
     FormsModule,
+    //formatResponse,
   ],
   bootstrap: [AppComponent]
 })
