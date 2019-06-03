@@ -17,25 +17,26 @@ export class api {
                 .catch(error => reject(error));
         })
     }
-
-    // public request = function () {
-    //     return new Promise(function (resolve, reject) {
-    //         var xhr = new XMLHttpRequest();
-    //         xhr.open('GET', 'http://192.168.1.31:9090/?FUNCAO=2&TIPRET=JSON&VERSAO=20190508&USUARI=1');
-    //         xhr.send(null);
-
-    //         xhr.onreadystatechange = function () {
-    //             if (xhr.readyState === 4) {
-    //                 if (xhr.status === 200) {
-    //                     //resolve(JSON.parse(xhr.responseText));
-    //                     console.log(resolve);
-    //                 } else {
-    //                     reject('Errow');
-    //                 }
-    //             }
-    //         }
-    //     });
-    // }
+    /*
+        public request = function () {
+            return new Promise(function (resolve, reject) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'http://192.168.1.31:9090/?FUNCAO=2&TIPRET=JSON&VERSAO=20190508&USUARI=1');
+                xhr.send(null);
+    
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            resolve(JSON.parse(xhr.response));
+                            //console.log(resolve);
+                        } else {
+                            reject('Errow');
+                        }
+                    }
+                }
+            });
+        }
+        */
 
 
 

@@ -22,7 +22,7 @@
       <!--id="1" #first ion-button click)="clicar(first)", cada elemento leva o mesmo id para ser identificado-->
       <!--na acao do click recebe o valor inserido no '#' para ter uma acao unica-->
       <ion-list>
-        <ion-item-sliding *ngFor="let lst of formatResponse">
+        <ion-item-sliding *ngFor="let lst of response">
           <ion-button id="1" #first ion-button fill="outline" expand="block" (click)="clicar(first)">
             {{add.descricao}}
           </ion-button>

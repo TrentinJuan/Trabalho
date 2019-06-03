@@ -1,12 +1,16 @@
-export const formatResponse = _prResponse => {
+import { async } from 'q';
 
-    if (_prResponse.this.indexOf('[{') === -1 && (_prResponse.this.indexOf('[]') === 0)) return [];
+const formatResponse = async (_prResponse: any) => {
 
-    let inicioData = _prResponse.this.indexOf('[{');
-    let finalData = _prResponse.length;
+    if (_prResponse.indexOf('[{') === -1 && (_prResponse.indexOf('[]') === 0)) return [];
+
+    var inicioData = _prResponse.indexOf('[{');
+    var finalData = _prResponse.length;
     console.log('Olar ', inicioData, finalData);
 
     return inicioData === -1
         ? _prResponse.substring(inicioData, finalData)
         : eval(_prResponse.substring(inicioData, finalData));
 }
+
+export { formatResponse };

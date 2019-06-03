@@ -18,6 +18,7 @@ import {HttpClientModule} from '@angular/common/http'
 //import { formatResponse } from './pages/home/funcao';
 
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -34,7 +35,7 @@ providers: [
     api,
     ReactiveFormsModule,
     FormsModule,
-    //formatResponse,
+    
   ],
   bootstrap: [AppComponent]
 })

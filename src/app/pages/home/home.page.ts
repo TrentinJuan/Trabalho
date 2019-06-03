@@ -15,8 +15,7 @@ export class HomePage implements OnInit {
 
   public formBotoes: FormGroup;
 
-  // Jogar a requisicao dento do Array
-  //public response: formatResponse[] = [];
+  
 
 
   public sensor1: string;// Portao Rua
@@ -48,13 +47,12 @@ export class HomePage implements OnInit {
 
   // Criar um response com eval
   //jogar em um array
-  // // e jogar no lstBotao
   public request() {
     this.api.request()
       .then(response => {
         let lst = formatResponse(response)
         console.log('caiu no api request', this.request);
-        console.log('retorno ' + lst)
+        console.log('retorno ' + lst + response);
       })
       .catch(err => console.log('Error: ', err))
   }
