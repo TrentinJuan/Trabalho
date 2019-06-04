@@ -17,6 +17,7 @@ export class api {
                 .catch(error => reject(error));
         })
     }
+    
     /*
         public request = function () {
             return new Promise(function (resolve, reject) {

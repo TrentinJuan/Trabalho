@@ -15,12 +15,16 @@ export class HomePage implements OnInit {
 
   public formBotoes: FormGroup;
 
-  
-
 
   public sensor1: string;// Portao Rua
   public sensor2: string;// Portao Garagem
   public sensor3: string;// Porta Social
+
+
+  public lista = [{ BOTOES_LIB: "6", DESCRI_LIB: "S6", ENABLE_LIB: "0" },
+  { BOTOES_LIB: "7", DESCRI_LIB: "S7", ENABLE_LIB: "0" }];
+
+  public listaBotao: any = [];
 
   constructor(public formBuilder: FormBuilder,
     public menuCtrl: MenuController,
@@ -33,11 +37,9 @@ export class HomePage implements OnInit {
   ngOnInit() {
 
     this.formBotoes = this.formBuilder.group({
-
       sensor1: [null, Validators.required],
       sensor2: [null, Validators.required],
       sensor3: [null, Validators.required]
-
     });
   }
 
@@ -45,14 +47,16 @@ export class HomePage implements OnInit {
     this.menuCtrl.enable(true);
   }
 
+
+
   // Criar um response com eval
   //jogar em um array
   public request() {
     this.api.request()
       .then(response => {
-        let lst = formatResponse(response)
-        console.log('caiu no api request', this.request);
-        console.log('retorno ' + lst + response);
+        console.log(response)
+
+        this.listaBotao = response;
       })
       .catch(err => console.log('Error: ', err))
   }

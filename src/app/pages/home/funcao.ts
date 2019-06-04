@@ -2,9 +2,9 @@ import { async } from 'q';
 
 const formatResponse = async (_prResponse: any) => {
 
-    if (_prResponse.indexOf('[{') === -1 && (_prResponse.indexOf('[]') === 0)) return [];
+    if (_prResponse.this.indexOf('[{') === -1 && (_prResponse.this.indexOf('[]') === 0)) return [];
 
-    var inicioData = _prResponse.indexOf('[{');
+    var inicioData = _prResponse.this.indexOf('[{');
     var finalData = _prResponse.length;
     console.log('Olar ', inicioData, finalData);
 
