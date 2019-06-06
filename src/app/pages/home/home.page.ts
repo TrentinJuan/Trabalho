@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MenuController, NavController } from '@ionic/angular';
 import { api } from 'src/app/services/api';
 
+
 import { formatResponse } from './funcao';
 
 
@@ -21,16 +22,19 @@ export class HomePage implements OnInit {
   public sensor3: string;// Porta Social
 
 
-  public lista = [{ BOTOES_LIB: "6", DESCRI_LIB: "S6", ENABLE_LIB: "0" },
-  { BOTOES_LIB: "7", DESCRI_LIB: "S7", ENABLE_LIB: "0" }];
+  // public lista = [{ BOTOES_LIB: "6", DESCRI_LIB: "S6", ENABLE_LIB: "0" },
+  // { BOTOES_LIB: "7", DESCRI_LIB: "S7", ENABLE_LIB: "0" }];
 
+
+  // Lista dos botoes puxados do servidor
   public listaBotao: any = [];
+
 
   constructor(public formBuilder: FormBuilder,
     public menuCtrl: MenuController,
     public navCtrl: NavController,
-    public api: api,
-    /*public funcao: formatResponse*/) {
+    public api: api) {
+    // Chamada do metodo public request()
     this.request();
   }
 
@@ -48,17 +52,17 @@ export class HomePage implements OnInit {
   }
 
 
-
   // Criar um response com eval
   //jogar em um array
   public request() {
     this.api.request()
       .then(response => {
-        console.log(response)
+        //this.lista = response;
+        this.listaBotao = formatResponse(String(response));
 
-        this.listaBotao = response;
+        console.log('asa: ', this.listaBotao);
       })
-      .catch(err => console.log('Error: ', err))
+      .catch(err => console.log('Error: ', err));
   }
 
 

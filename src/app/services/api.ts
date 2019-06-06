@@ -13,11 +13,11 @@ export class api {
     public request() {
         return new Promise((resolve, reject) => {
             this.http.get('http://192.168.1.31:9090/?FUNCAO=2&TIPRET=JSON&VERSAO=20190508&USUARI=1', {}, {})
-                .then(data => resolve(data))
+                .then(response => resolve(response.data))
                 .catch(error => reject(error));
         })
     }
-    
+
     /*
         public request = function () {
             return new Promise(function (resolve, reject) {
