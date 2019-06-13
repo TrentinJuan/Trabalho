@@ -3,13 +3,14 @@
     align-items: center;
     display: flex;
 
-
+    
     .img{
-        height: 50%;
-        width: 80%;
-        position: fixed;
-        top: 25%;
-        left: 20%;
+        margin-top: 35%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        opacity: 0.38;
     }
 
 
@@ -17,18 +18,13 @@
         top: 0;
         width: 100%;
         position: absolute;
-        z-index: 100;
-        padding: 5.5%;
 
-        
-        // .sensores{
-        //     background: rgb(22,123,131);
-        //     background: linear-gradient(34deg, rgb(157, 248, 255) 6%, rgb(255, 255, 255) 40%, rgb(1, 243, 231) 84%);
-        // }
-        // .botoes-ligar-desligar{
-        //     background: rgb(22,123,131);
-        //     background: linear-gradient(34deg, rgb(157, 248, 255) 6%, rgb(255, 255, 255) 40%, rgb(1, 243, 231) 84%);
-        // }
+        .botoes-ligar-desligar{
+            .buttons{
+                opacity: 0.89;
+                padding: 5.5%;
+           }
+        }
     }
 }
 

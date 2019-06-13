@@ -11,39 +11,20 @@
 
 
 <ion-content class="buttons-home">
-  <div class="img" style="opacity: 0.1">
+  <div class="img">
     <img src="assets/tj.png">
   </div>
 
   <div class="botao">
+    <h4>Botoes Liberados</h4>
     <div class="botoes-ligar-desligar">
       <!--id="1" #first ion-button click)="clicar(first)", cada elemento leva o mesmo id para ser identificado-->
       <!--na acao do click recebe o valor inserido no '#' para ter uma acao unica-->
-      <ion-item-sliding *ngFor="let botao of listaBotao">
-        <ion-list>
-          <ion-button id="1" #first ion-button fill="outline" expand="block" (click)="clicar(first)">
-            {{botao.DESCRI_LIB}}
-          </ion-button>
-        </ion-list>
-      </ion-item-sliding>
+      <ion-list class="buttons" *ngFor="let botao of listaBotao">
+        <ion-button id="1" #first ion-button fill="outline" expand="block" (click)="handlerExecuteAction(first, botao)">
+          {{botao.DESCRI_LIB}}
+        </ion-button>
+      </ion-list>
     </div>
-
-
-    <form [formGroup]="formBotoes" (ngSubmit)="clicar()">
-      <div class="sensores">
-        <H2>SENSORES</H2>
-        <div class="sensefil">
-          <ion-button id="1" #fifteenth ion-button fill="outline" expand="block" (click)="clicar(fifteenth)">
-            Portão Rua
-          </ion-button>
-          <ion-button id="1" #sixteenth ion-button fill="outline" expand="block" (click)="clicar(sixteenth)">
-            Portão Garagem
-          </ion-button>
-          <ion-button id="1" #seventeenth ion-button fill="outline" expand="block" (click)="clicar(seventeenth)">
-            Porta Social
-          </ion-button>
-        </div>
-      </div>
-    </form>
   </div>
 </ion-content>
