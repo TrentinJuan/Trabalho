@@ -86,23 +86,32 @@ export class HomePage implements OnInit {
     console.log(enCripta(command));
     command = command.replace(/#/g, '%23');
 
-
-
-    this.api.changeButtonStatus(command.replace(/ /g, ''))
-      .then(response => {
-
-        console.log('Response: ', response);
-
-        if (response === 'OK') {
-          if (_prButton.color === 'secondary')
-            _prButton.color = 'primary';
-          else
-            _prButton.color = 'secondary';
-        } else {
-          this.mostrarMensagem('Nao foi possivel realizar a acao');
-        }
-      })
-      .catch(err => console.log('Erro click Button ' + err))
+    try {
+      this.api.changeButtonStatus(command.replace(/ /g, ''))
+        .then(response => {
+          console.log('Response: ', response);
+          if (response === 'OK') {
+            let buttons = [... this.listaBotao];
+            buttons.map(btn => {
+              if (btn.BOTOES_LIB == _prData.BOTOES_LIB) {
+                btn.active = !btn.active;
+                if (_prButton.color === 'secondary')
+                  _prButton.color = 'primary';
+                else
+                  _prButton.color = 'secondary';
+              }
+              return btn;
+            });
+          } else {
+            this.mostrarMensagem('Nao foi possivel realizar a acao');
+          }
+        })
+        .catch(err => {
+          this.mostrarMensagem('Erro ao se comunicar com o servidor')
+        });
+    } catch (err) {
+      this.mostrarMensagem('Nao foi possivel realizar a acao');
+    }
   }
 
 
