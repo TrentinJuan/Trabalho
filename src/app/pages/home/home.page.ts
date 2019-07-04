@@ -103,14 +103,14 @@ export class HomePage implements OnInit {
               return btn;
             });
           } else {
-            this.mostrarMensagem('Nao foi possivel realizar a acao');
+            this.mostrarMensagem('Não foi possível realizar a ação');
           }
         })
         .catch(err => {
           this.mostrarMensagem('Erro ao se comunicar com o servidor')
         });
     } catch (err) {
-      this.mostrarMensagem('Nao foi possivel realizar a acao');
+      this.mostrarMensagem('Não foi possível realizar a ação');
     }
   }
 
